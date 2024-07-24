@@ -46,11 +46,28 @@ const pizzaData = [
   },
 ];
 
-
+// Main App
 function App() {
   return (
     <div>
-      <h1>Hello React!</h1>
+      <Header />
+      <Menu />
+      <Footer />
+    </div>
+  );
+}
+
+// Header component
+function Header() {
+  return <h1>Virtual Dominos Pizza</h1>;
+}
+
+// Menu component
+function Menu() {
+  return (
+    <div>
+      <h2>Our Menu</h2>
+      <Pizza />
       <Pizza />
       <Pizza />
       <Pizza />
@@ -58,6 +75,7 @@ function App() {
   );
 }
 
+// Pizza component
 function Pizza() {
   return (
     <div>
@@ -67,6 +85,12 @@ function Pizza() {
     </div>
   );
 }
+
+// Footer component 
+function Footer() {
+  return <footer>{new Date().toLocaleTimeString()} We're currently open!</footer>;
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<React.StrictMode><App /></React.StrictMode>);
