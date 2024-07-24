@@ -72,12 +72,9 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza name={pizzaData[0].name} ingredients={pizzaData[0].ingredients} imgSrc={pizzaData[0].photoName} price={pizzaData[0].price} />
-      <Pizza name={pizzaData[1].name} ingredients={pizzaData[1].ingredients} imgSrc={pizzaData[1].photoName} price={pizzaData[1].price} />
-      <Pizza name={pizzaData[2].name} ingredients={pizzaData[2].ingredients} imgSrc={pizzaData[2].photoName} price={pizzaData[2].price} />
-      <Pizza name={pizzaData[3].name} ingredients={pizzaData[3].ingredients} imgSrc={pizzaData[3].photoName} price={pizzaData[3].price} />
-      <Pizza name={pizzaData[4].name} ingredients={pizzaData[4].ingredients} imgSrc={pizzaData[4].photoName} price={pizzaData[4].price} />
-      <Pizza name={pizzaData[5].name} ingredients={pizzaData[5].ingredients} imgSrc={pizzaData[5].photoName} price={pizzaData[5].price} />
+      <ul className="pizzas">
+        {pizzaData.map(pizza => <Pizza pizzaObj={pizza} key={pizza.name} />)}
+      </ul>
     </main>
   );
 }
@@ -85,14 +82,14 @@ function Menu() {
 // Pizza component
 function Pizza(props) {
   return (
-    <div className="pizza">
-      <img src={props.imgSrc} alt={props.name} />
+    <li className="pizza">
+      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
       <div>
-        <h3>{props.name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.price}</span>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredients}</p>
+        <span>{props.pizzaObj.price}</span>
       </div>
-    </div>
+    </li>
   );
 }
 

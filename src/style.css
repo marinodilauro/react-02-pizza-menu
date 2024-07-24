@@ -101,6 +101,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4.8rem;
+  margin-bottom: 8rem;
 }
 
 .pizza {
@@ -153,6 +154,7 @@ body {
 
 .footer {
   font-size: 1.4rem;
+  text-align: center;
 }
 
 .order {
