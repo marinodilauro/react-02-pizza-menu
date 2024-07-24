@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./style.css";
 
 const pizzaData = [
   {
@@ -11,35 +12,35 @@ const pizzaData = [
   },
   {
     name: "Pizza Margherita",
-    ingredients: "Tomato and mozarella",
+    ingredients: "Tomato and mozzarella",
     price: 10,
     photoName: "pizzas/margherita.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Spinaci",
-    ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
+    ingredients: "Tomato, mozzarella, spinach, and ricotta cheese",
     price: 12,
     photoName: "pizzas/spinaci.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Funghi",
-    ingredients: "Tomato, mozarella, mushrooms, and onion",
+    ingredients: "Tomato, mozzarella, mushrooms, and onion",
     price: 12,
     photoName: "pizzas/funghi.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Salamino",
-    ingredients: "Tomato, mozarella, and pepperoni",
+    ingredients: "Tomato, mozzarella, and pepperoni",
     price: 15,
     photoName: "pizzas/salamino.jpg",
     soldOut: true,
   },
   {
     name: "Pizza Prosciutto",
-    ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
+    ingredients: "Tomato, mozzarella, ham, aragula, and burrata cheese",
     price: 18,
     photoName: "pizzas/prosciutto.jpg",
     soldOut: false,
@@ -59,36 +60,55 @@ function App() {
 
 // Header component
 function Header() {
-  return <h1>Virtual Dominos Pizza</h1>;
+  return (
+    <header className="header">
+      <h1 >Virtual DOMinos Pizza</h1>
+    </header>
+  );
 }
 
 // Menu component
 function Menu() {
   return (
-    <div>
+    <main className="menu">
       <h2>Our Menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
-    </div>
+      <Pizza name={pizzaData[0].name} ingredients={pizzaData[0].ingredients} imgSrc={pizzaData[0].photoName} price={pizzaData[0].price} />
+      <Pizza name={pizzaData[1].name} ingredients={pizzaData[1].ingredients} imgSrc={pizzaData[1].photoName} price={pizzaData[1].price} />
+      <Pizza name={pizzaData[2].name} ingredients={pizzaData[2].ingredients} imgSrc={pizzaData[2].photoName} price={pizzaData[2].price} />
+      <Pizza name={pizzaData[3].name} ingredients={pizzaData[3].ingredients} imgSrc={pizzaData[3].photoName} price={pizzaData[3].price} />
+      <Pizza name={pizzaData[4].name} ingredients={pizzaData[4].ingredients} imgSrc={pizzaData[4].photoName} price={pizzaData[4].price} />
+      <Pizza name={pizzaData[5].name} ingredients={pizzaData[5].ingredients} imgSrc={pizzaData[5].photoName} price={pizzaData[5].price} />
+    </main>
   );
 }
 
 // Pizza component
-function Pizza() {
+function Pizza(props) {
   return (
-    <div>
-      <img src="pizzas/margherita.jpg" alt="Pizza Margherita" />
-      <h2>Pizza Margherita</h2>
-      <p>Tomato and mozarella</p>
+    <div className="pizza">
+      <img src={props.imgSrc} alt={props.name} />
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.price}</span>
+      </div>
     </div>
   );
 }
 
 // Footer component 
 function Footer() {
-  return <footer>{new Date().toLocaleTimeString()} We're currently open!</footer>;
+  const hour = new Date().getHours();
+  console.log(hour);
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = hour >= openHour && hour <= closeHour;
+  console.log(isOpen);
+
+  /*   if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
+    else alert("Sorry we're closed!"); */
+
+  return <footer className="footer">{new Date().toLocaleTimeString()} We're currently open!</footer>;
 }
 
 

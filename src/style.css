@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
 
 * {
   margin: 0;
@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   color: #252525;
   font-weight: 400;
   background-color: #f7f2e9;
@@ -24,25 +24,21 @@ body {
 .container {
   max-width: 80rem;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4.8rem;
 }
 
-/* *************** */
+/* #region :::: HEADER :::: */
 
 .header {
   align-self: stretch;
+  margin-bottom: 3rem;
 }
 
 .header h1 {
-  /* Non-accessible color */
   color: #edc84b;
-  /* color: #af8602; */
-
-  text-transform: uppercase;
   text-align: center;
   font-size: 5.2rem;
   font-weight: 300;
@@ -55,7 +51,7 @@ body {
 .header h1::before,
 .header h1::after {
   display: block;
-  content: '';
+  content: "";
   height: 3px;
   width: 12rem;
   background-color: #edc84b;
@@ -71,7 +67,9 @@ body {
   right: 0;
 }
 
-/* *************** */
+/* #endregion :::: HEADER :::: */
+
+/* #region :::: MENU :::: */
 
 .menu {
   display: flex;
@@ -149,7 +147,9 @@ body {
   opacity: 0.8;
 }
 
-/* *************** */
+/* #endregion :::: MENU :::: */
+
+/* #region :::: FOOTER :::: */
 
 .footer {
   font-size: 1.4rem;
@@ -178,10 +178,4 @@ body {
   background-color: #e9bb24;
 }
 
-/*
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
-
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
-*/
+/* #endregion :::: FOOTER :::: */
