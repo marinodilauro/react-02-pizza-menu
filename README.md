@@ -9,7 +9,7 @@ Questo progetto è un'applicazione front-end per visualizzare il menu di una piz
 - Orario di apertura dinamico con messaggio personalizzato
 - Design responsive per una visualizzazione ottimale su diversi dispositivi
 
-## Tecnologie Utilizzate
+## Tecnologie utilizzate
 
 - HTML
 - - CSS
@@ -32,7 +32,7 @@ npm install
 npm start
 ```
 
-## Struttura del Progetto
+## Struttura del progetto
 
 ```
 public/
@@ -52,17 +52,17 @@ src/
 - `style.css`: Contiene tutti gli stili CSS per l'applicazione
 - `pizzas/`: Directory contenente le immagini delle pizze
 
-## Sfide Affrontate
+## Sfide affrontate
 
 - Implementazione di un design minimal e intuitivo.
 - Gestione dinamica dello stato di "sold-out" per le pizze non disponibili.
 - Visualizzazione dinamica del footer con orario di apertura e pulsante per ordinare a seconda dell'orario a cui si accede alla pagina.
 
-## Cosa Ho Imparato
+## Cosa ho imparato
 
 - Utilizzo efficace dei componenti React per creare un'interfaccia utente modulare.
 - Implementazione di logica condizionale per la visualizzazione dei contenuti in React.
 
-## Visualizzare il Progetto
+## Visualizzare il progetto
 
 Il progetto è visionabile tramite GitHub Pages al seguente indirizzo: https://marinodilauro.github.io/react-02-pizza-menu/
