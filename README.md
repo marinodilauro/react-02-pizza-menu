@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Virtual DOMinos Pizza Menu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Questo progetto è un'applicazione front-end per visualizzare il menu di una pizzeria virtuale chiamata "Virtual DOMinos Pizza". L'applicazione mostra una lista di pizze con dettagli come ingredienti, prezzi e disponibilità, utilizzando React per creare un'interfaccia utente interattiva e responsive.
 
-## Available Scripts
+## Funzionalità
 
-In the project directory, you can run:
+- Visualizzazione di un menu di pizze con immagini, nomi, ingredienti e prezzi
+- Indicazione visuale delle pizze esaurite
+- Orario di apertura dinamico con messaggio personalizzato
+- Design responsive per una visualizzazione ottimale su diversi dispositivi
 
-### `npm start`
+## Tecnologie Utilizzate
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- HTML
+- - CSS
+- Javascript
+- React
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installazione
 
-### `npm test`
+```bash
+# Clona il repository
+git clone https://github.com/marinodilauro/react-02-pizza-menu
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Entra nella directory del progetto
+cd virtual-dominos-pizza
 
-### `npm run build`
+# Installa le dipendenze
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Avvia l'applicazione in modalità sviluppo
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Struttura del Progetto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+public/
+|-- pizzas/
+    |-- focaccia.jpg
+    |-- margherita.jpg
+    |-- spinaci.jpg
+    |-- funghi.jpg
+    |-- salamino.jpg
+    |-- prosciutto.jpg
+src/
+|-- index.js
+|-- style.css
+```
 
-### `npm run eject`
+- `index.js`: Contiene tutti i componenti React e la logica dell'applicazione
+- `style.css`: Contiene tutti gli stili CSS per l'applicazione
+- `pizzas/`: Directory contenente le immagini delle pizze
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Sfide Affrontate
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Implementazione di un design minimal e intuitivo.
+- Gestione dinamica dello stato di "sold-out" per le pizze non disponibili.
+- Visualizzazione dinamica del footer con orario di apertura e pulsante per ordinare a seconda dell'orario a cui si accede alla pagina.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Cosa Ho Imparato
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Utilizzo efficace dei componenti React per creare un'interfaccia utente modulare.
+- Implementazione di logica condizionale per la visualizzazione dei contenuti in React.
 
-## Learn More
+## Visualizzare il Progetto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Il progetto è visionabile tramite GitHub Pages al seguente indirizzo: https://marinodilauro.github.io/react-02-pizza-menu/
