@@ -34,7 +34,6 @@ body {
 
 .header {
   align-self: stretch;
-  margin-bottom: 3rem;
 }
 
 .header h1 {
@@ -56,15 +55,15 @@ body {
   width: 12rem;
   background-color: #edc84b;
   position: absolute;
-  top: calc(50% - 1px);
+  top: 50%;
 }
 
 .header h1::before {
-  left: 0;
+  left: -15%;
 }
 
 .header h1::after {
-  right: 0;
+  right: -15%;
 }
 
 /* #endregion :::: HEADER :::: */
@@ -100,8 +99,7 @@ body {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.8rem;
-  margin-bottom: 8rem;
+  gap: 4rem;
 }
 
 .pizza {
@@ -113,6 +111,19 @@ body {
   width: 12rem;
   aspect-ratio: 1;
   align-self: start;
+}
+
+.pizza:not(.sold-out) img,
+.pizza:not(.sold-out) h3 {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.pizza:not(.sold-out) h3 {
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .pizza div {
